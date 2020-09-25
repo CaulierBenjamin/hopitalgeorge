@@ -4,7 +4,7 @@ actor "Hôtesse" as ht
 package Accueil {
   usecase "Systeme de gestion" as UC1
   usecase "Guidages des visiteurs" as UC2
-  usecase "appel ambulance de jour" as UC3
+  usecase "appel ambulance" as UC3
   usecase "enregistrement des options" as UC4
   usecase "Restitution des télécommandes" as UC5
   usecase "accueil des techniciens" as UC6
@@ -15,6 +15,7 @@ package Accueil {
   usecase "jour" as UCJ
   (UC6) .>(UC7) : include
   (UC10).> (UC9) : include
+  (UC3).>(UCJ) : include
 
 }
 ht --> UC1

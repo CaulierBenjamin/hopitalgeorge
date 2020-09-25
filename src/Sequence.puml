@@ -1,10 +1,17 @@
 @startuml
+actor Accompagants
 actor hôtesse
 participant Ordinateur
-hôtesse -> Ordinateur : demande de ticket
+hôtesse -> Accompagants : demande ticket
+Accompagants ->hôtesse: donne ticket
+hôtesse -> Ordinateur : enregistre ticket
 Ordinateur -> hôtesse : demande les renseignement
+hôtesse -> Accompagants : demande les renseignement
+Accompagants ->hôtesse: Donne les renseignement
 hôtesse -> Ordinateur : enregistre les renseignement
 Ordinateur -> hôtesse : demande de moyen de paiement
+hôtesse -> Accompagants : demande le moyen de paiement
+Accompagants ->hôtesse: Donne le moyen de paiement
 hôtesse -> Ordinateur : enregistre le moyen de paiement
-Ordinateur -> hôtesse : rend ticket
+hôtesse -> Accompagants : redonne le ticket
 @enduml

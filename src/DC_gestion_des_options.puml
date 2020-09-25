@@ -1,0 +1,33 @@
+@startuml
+class GESTION_OPTIONS{
+- numChambre : int
+- nomPatient : String
+- prenomPatien : String
+- dureeHospitalisation : int
+- telecomandeNum : int
+- cheque-caution : booleen
+- telephone : booleen
+
++ Gestion_options(int prmNumChambre , String prmNomPatient , String prmPrenomPatient , int prmDureeHospitalisation)
++ PrendreTV(int prmNumChambre , String prmNomPatient , String prmPrenomPatient , int prmDureeHospitalisation , int prmTelecommandeNum , booleen prmCheque-caution)
++ PrendreTelephone(int prmNumChambre , String prmNomPatient , String prmPrenomPatient , int prmDureeHospitalisation , booleen prmTelephone)
+
++ getNumChambre() : String
++ getNomPatient() : String
++ getPrenom() : String
++ getDureeHospitalisation() : String
++ getTelecomandeNum() : String
++ getCheque-caution() : String
++ getTelephone() : String
+
++ setNumChambre(int prmNumChambre) : void
++ setNomPatient(String prmNomPatient) : void
++ setPrenom(String prmPrenom) : void
++ setDureeHospitalisation(int prmDureeHospitalisation) : void
++ setTelecomandeNum(int prmNumtelecomand) : void
++ setCheque-caution(boolen prmCheque) : void
++ setTelephone(boolen prmTelephone) : void
+
++ toString() : String
+}
+@enduml

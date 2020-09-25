@@ -1,0 +1,45 @@
+@startuml
+class GESTION_ACCOMPAGNANTS{
+- numChambrePatient : int
+- nomPatient : String
+- prenomPatient : String
+- moyen_de_paiement : String
+- listTickets : list<Ticket>
+- listRepas : list<int>
+
++ Gestion_accompagnants(int prmNumChambrePatient, String prmNomPatient,String prmPrenomPatient,String prmMoyen_de_paiement)
++ ajouterTicket(Ticket prmTicket) :void
++ afficherlistTicket() : void
++ afficherlistRepas() : void
++ ajouterRepas() : void
+
++ getnumChambrePatient() : String
++ getnomPatient() : String
++ getprenomPatient() : String
++ getmoyen_de_paiement() : String
+
++ setnumChambrePatient(int prmNumChambrePatient) : void
++ setnomPatient(String prmNomPatient) : void
++ setprenomPatient(String prmPrenomPAt) : void
++ setmoyen_de_paiement(String prmMoyen_de_paiment) : void
+
++toString() :String
+
+}
+
+class TICKET{
+- numTicket : int
+- valeurTicket : double
++ Ticket(int prmNumTicket, double prmValeurTicket)
+
++ setNumTicket(int prmNumTicket) : void
++ setValeurTicket(double prmValeurTicket) : void
+
++ getNumTicket() : String
++ getValeurTicket() : String
+
++toString() :String
+}
+
+GESTION_ACCOMPAGNANTS -- TICKET
+@enduml
