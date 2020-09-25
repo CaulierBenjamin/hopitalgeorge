@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+actor "Hôtesse" as ht
+package Accueil {
+  usecase "Systeme de gestion" as UC1
+  usecase "Guidages des visiteurs" as UC2
+  usecase "appel ambulance de jour" as UC3
+  usecase "enregistrement des options" as UC4
+  usecase "Restitution des télécommandes" as UC5
+  usecase "accueil des techniciens" as UC6
+  usecase "cas de travaux" as UC7
+  usecase "verifier le contenu de la caisse" as UC8
+  usecase "recevoir ticket" as UC9
+  usecase "Noter les renseignement" as UC10
+  usecase "jour" as UCJ
+  (UC6) .>(UC7) : include
+  (UC10).> (UC9) : include
+
+}
+ht --> UC1
+ht --> UC2
+ht --> UC3
+ht --> UC4
+ht --> UC5
+ht --> UC6
+ht --> UC8
+ht --> UC10
+
+
+
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+actor hôtesse
+participant Ordinateur
+hôtesse -> Ordinateur : demande de ticket
+Ordinateur -> hôtesse : demande les renseignement
+hôtesse -> Ordinateur : enregistre les renseignement
+Ordinateur -> hôtesse : demande de moyen de paiement
+hôtesse -> Ordinateur : enregistre le moyen de paiement
+Ordinateur -> hôtesse : rend ticket
+@enduml
